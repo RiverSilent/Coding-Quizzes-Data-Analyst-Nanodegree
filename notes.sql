@@ -43,3 +43,23 @@ SELECT *
   FROM orders
 ORDER BY occurred_at,total_amt_usd
 LIMIT 10;
+
+# Pull the first 5 rows and all columns from the orders table that have a dollar amount of gloss_amt_usd greater than or equal to 1000.
+
+SELECT *
+  FROM orders
+WHERE gloss_amt_usd >= 1000
+LIMIT 5;
+
+# Pull the first 10 rows and all columns from the orders table that have a total_amt_usd less than 500.
+
+SELECT * 
+  FROM orders
+WHERE total_amt_usd < 5000
+LIMIT 10;
+
+# Filter the accounts table to include the company name, website, and the primary point of contact (primary_poc) for Exxon Mobil in the accounts table.
+
+SELECT name,website,primary_poc
+  FROM accounts
+WHERE name='Exxon Mobil';
